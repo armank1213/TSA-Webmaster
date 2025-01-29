@@ -1,0 +1,256 @@
+@charset "utf8";
+
+/* 
+Styles for the order page
+*/
+
+@import url(../base.css);
+
+/* HEADER */
+
+#banner {
+  background: -o-linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url('../resources/meals.jpg') center center / cover no-repeat;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))),
+    url('../resources/meals.jpg') center center / cover no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url('../resources/meals.jpg') center center / cover no-repeat;
+  height: 25rem;
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.title {
+  top: 5rem;
+  position: relative;
+  font-size: 3rem;
+  padding-top: 3rem;
+}
+
+.subtitle {
+  font-size: 2rem;
+  padding-top: 1rem;
+}
+
+/* MENU & ORDER SECTION */
+
+#orderContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+#orderForm {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 65%;
+  flex: 1 1 65%;
+  margin-bottom: 1rem;
+  width: 66%;
+}
+
+#yourOrderContainer {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 30%;
+  flex: 1 1 30%;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+}
+
+/* ORDER FORM */
+
+#orderContainer>header {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.orderTitle {
+  font-family: RobotoBold;
+  text-align: center;
+  font-size: 2rem;
+  font-variant: small-caps;
+  line-height: 1.8rem;
+  margin: 1rem 0;
+}
+
+.orderSubtitle {
+}
+
+.row {
+  
+  margin-bottom: 1rem;
+  border: 1px solid var(--orange);
+  background-color: var(--light-orange);
+  border-radius: 3px;
+  padding: 0.5rem;
+}
+
+@media screen and (min-width:600px) {
+  .row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+
+  .imgContainer {
+    width: 20%;
+    height: 100px;
+  }
+  
+  .foodImg {
+    height: 100%;
+  }
+  
+  .item-name {
+    width: 58%;
+    padding: 0 1.5rem;
+  }
+
+  .price {
+    width: 12%;
+  }
+
+  .qty-container {
+    width: 10%;
+  }
+
+
+}
+
+.foodImg {
+  border-radius: 5px;
+  width: 100%;
+  background-size: cover;
+}
+
+.item-name,
+.price,
+.qty-container {
+  padding-top: 0.5rem;
+}
+
+.item-name {
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.price {
+  font-size: 1rem;
+  font-style: italic;
+  font-weight: 500;
+}
+
+.qtyNum {
+  padding: 0.5rem;
+  width: 100%;
+}
+
+.btn {
+  width: 100%;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+/* ORDER PREVIEW */
+
+#yourOrderContainer {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 6rem;
+  padding: 1rem 2rem;
+  /* border: 2px solid var(--light-gray); */
+  border-radius: 5px;
+  -webkit-box-shadow: var(--light-gray) 0 0 15px;
+  box-shadow: var(--light-gray) 0 0 15px;
+}
+
+@media screen and (min-width:600px) {
+  #yourOrderContainer {
+    margin-left: 3rem;
+
+  }
+}
+
+#yourOrder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+  width: 100%;
+  line-height: 1.5rem;
+  font-size: 0.85rem;
+}
+
+.yourOrderIntro {
+  text-align: center;
+}
+
+.yourHeading,
+.yourRow,
+.subtotalRow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row;
+  flex-flow: row;
+}
+
+.yourHeading {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.05rem;
+  text-transform: uppercase;
+  color: var(--dark-gray);
+  border-bottom: 1px solid var(--gray);
+  padding-bottom: 0.5rem;
+}
+
+.itemCol {
+  width: 80%;
+}
+
+.qtyCol {
+  text-align: center;
+  width: 20%;
+}
+
+.yourRow {
+  font-size: 1rem;
+  line-height: 1.35rem;
+  text-align: start;
+  margin: 0.5rem 0;
+}
+
+.yourRow > .itemCol {
+  letter-spacing: -0.05rem;
+}
+
+.subtotalRow {
+  text-transform: uppercase;
+  font-weight: 800;
+  border-top: 1px solid var(--gray);
+  padding-top: 0.5rem;
+}

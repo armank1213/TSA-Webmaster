@@ -1,0 +1,58 @@
+@charset "utf8";
+
+/* 
+Styles for the Resource Information page
+*/
+
+@import url(../base.css);
+
+/* Reset margin and padding for the body */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* TITLE SECTION */
+
+#banner {
+  background: -o-linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url('../resources/farm-to-table_restaurants__5184x2103____v1222x580__.jpg') center center / cover no-repeat;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))),
+    url('../resources/farm-to-table_restaurants__5184x2103____v1222x580__.jpg') center center / cover no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url('../resources/farm-to-table_restaurants__5184x2103____v1222x580__.jpg') center center / cover no-repeat;
+  height: 20rem; /* Shortened the height */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  font-size: 3rem;
+  color: white;
+  margin-top: 0.5rem; /* Pushed up the title text */
+}
+
+/* CONTENT SECTION */
+
+.container {
+  margin-top: 2rem;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.section-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+article {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-bottom: 2rem;
+}
