@@ -1,6 +1,6 @@
 @charset "utf8";
 
-@import url(../base.css);
+@import url(../base.css); 
 
 /* Reset margin and padding for the body */
 body {
@@ -26,10 +26,12 @@ body {
   margin-top: 0.5rem;
 }
 
-/* CONTENT SECTION */
-.container {
-  margin-top: 2rem;
+.subtitle {
+  font-size: 2rem;
+  padding-top: 1rem;
 }
+
+/* CONTENT SECTION */
 
 .section-title {
   font-size: 2rem;
