@@ -92,17 +92,38 @@ const calculate = function () {
   // Calculate tax and final amount to be charged
   const taxAmount = subtotal * taxRate;
   const finalBalance = subtotal + taxAmount;
-  message +=
-    'Subtotal: $' +
-    subtotal.toFixed(2) +
-    '\n' +
-    'Total Tax: $' +
-    taxAmount.toFixed(2) +
-    '\n' +
-    'Total Balance Due: $' +
-    finalBalance.toFixed(2);
 
-  alert(message);
+  // Update the order container with the order summary
+  const yourOrder = document.getElementById('yourOrder');
+  yourOrder.innerHTML = `
+    <div class="order-summary">
+      <p>${message.replace(/\n/g, '<br>')}</p>
+      <p>Subtotal: $${subtotal.toFixed(2)}</p>
+      <p>Total Tax: $${taxAmount.toFixed(2)}</p>
+      <p>Total Balance Due: $${finalBalance.toFixed(2)}</p>
+      <p>Thank you for ordering at The Vegan Garden!</p>
+      <button id="orderAgainButton" class="btn">Order Again</button>
+    </div>
+  `;
+
+  // Add event listener to the "Order Again" button
+  document.getElementById('orderAgainButton').addEventListener('click', resetOrder);
+};
+
+// Function to reset the order form and order summary
+const resetOrder = () => {
+  // Reset the order form
+  const selectElements = document.querySelectorAll('.qtyNum');
+  selectElements.forEach(select => {
+    select.value = 0;
+  });
+
+  // Clear the order summary
+  const yourOrder = document.getElementById('yourOrder');
+  yourOrder.innerHTML = '<span class="yourOrderIntro">Your order is empty. <br> You can start by selecting an item from the menu on the left.</span>';
+
+  // Clear the order array
+  order = [];
 };
 
 // Function to create a live preview of the order
@@ -166,8 +187,8 @@ const updateOrder = (arr) => {
     itemHead.classList.add('itemCol');
     itemHead.innerText = 'Item';
     let qtyHead = document.createElement('div');
-    qtyHead.classList.add('qtyCol');
     qtyHead.innerText = 'Qty';
+    qtyHead.classList.add('qtyCol');
     yourOrderHeading.appendChild(itemHead);
     yourOrderHeading.appendChild(qtyHead);
     yourOrder.appendChild(yourOrderHeading);
@@ -193,7 +214,7 @@ const updateOrder = (arr) => {
       yourOrder.appendChild(row);
     }
 
-    // Create subtotal footer to preview abutotal amount due
+    // Create subtotal footer to preview subtotal amount due
     let subtotalRow = document.createElement('div');
     subtotalRow.classList.add('subtotalRow');
     let subtotalTitle = document.createElement('div');

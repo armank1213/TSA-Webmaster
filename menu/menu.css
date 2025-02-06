@@ -10,12 +10,12 @@ Styles for the Menu page
 
 #banner {
   background: -o-linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url('../resources/veggies_enhanced.jpg') center center / cover no-repeat;
+    url('../resources/background.jpg') center center / cover no-repeat;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))),
-    url('../resources/veggies_enhanced.jpg') center center / cover no-repeat;
+    url('../resources/background.jpg') center center / cover no-repeat;
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url('../resources/veggies_enhanced.jpg') center center / cover no-repeat;
-  height: 25rem;
+    url('../resources/background.jpg') center center / cover no-repeat;
+  height: 30rem;
   position: relative;
 }
 

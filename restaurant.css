@@ -1,4 +1,4 @@
-@charset "utf8";
+@charset "utf8"; 
 
 /* 
 Styles for the home page
@@ -10,11 +10,11 @@ Styles for the home page
 
 #banner {
   background: -o-linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url(resources/veggies_enhanced.jpg) center center / cover no-repeat;
+    url(resources/background.jpg) center center / cover no-repeat;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))),
-    url(resources/veggies_enhanced.jpg) center center / cover no-repeat;
+    url(resources/background.jpg) center center / cover no-repeat;
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url(resources/veggies_enhanced.jpg) center center / cover no-repeat;
+    url(resources/background.jpg) center center / cover no-repeat;
 }
 
 /* SPECIALS */
@@ -124,11 +124,11 @@ Styles for the home page
 
 #open {
   background: -o-linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url(resources/vegan_diet.jpg) center center / cover no-repeat;
+    url(./resources/background-2.jpg) center center / cover no-repeat;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))),
-    url(resources/vegan_diet.jpg) center center / cover no-repeat;
+    url(./resources/background-2.jpg) center center / cover no-repeat;
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url(resources/vegan_diet.jpg) center center / cover no-repeat;
+    url(./resources/background-2.jpg) center center / cover no-repeat;
   color: var(--white);
   margin-bottom: 0;
   height: 80vh;
@@ -164,8 +164,8 @@ Styles for the home page
 
 #join-main p {
   line-height: 1.5;
-  font-size: 0.9rem;
-  margin-bottom: 2rem;
+  font-size: 1rem;
+  margin-bottom: 3rem;
 }
 
 @media screen and (min-width: 600px) {

@@ -4,30 +4,51 @@
 Filename:   menu.js
 */
 
-// TODO change arrays to foodItems.js
-
-// Menu Items, prices, images
-const foodItem = ['Lemon Fish with Sundried Tomatoes', ' Spicy Chicken and Steamed Vegetables', 'Italian Meatballs', 'Pasta Italiana in Sauce', 'Oven Baked Pizza'];
-const foodPrice = [12.95, 9.95, 10.95, 8.85, 11.95];
-const foodImg = ['itemFish.jpg', 'itemChickenVeg.jpg', 'itemMeatballs.jpg', 'itemPastaSauce.jpg', 'itemPizza.jpg'];
-const foodDesc = [
-  'Wild-caught tilapia pan-fried in olive oil, garlic, and other deliciousness. Served with lemon and sun-dried tomatoes.',
-  'Juicy chicken breast pan-fried in olive oil, garlic, and other deliciousness. Served with a healthy helping of steamed vegetables.',
-  'Pan-fried meatballs made with grass-fed beef, garlic, and other deliciousness. Served on a bed of healthy greens.',
-  'Home-made pasta in refreshing tomato sauce. Served with a side of cold-pressed olive oil, garlic bread.',
-  'Authentic pizza from Naples, Italy. Expect an airy dough, crispy on the outside, soft on the inside. A perfect vessel for the tasty toppings you choose.',
+// Vegan Menu Items, Prices, Descriptions, and Images
+const foodItem = [
+  'Garden Flatbread',
+  'Wild Mushroom Risotto',
+  'Evergreen Bowl',
+  'Seasonal Harvest Soup',
+  'Rainbow Veggie Stir-Fry',
+  'Chocolate Avocado Mousse',
+  'Grilled Veggie Sandwich'
 ];
 
+const foodPrice = [15.95, 12.95, 10.95, 9.95, 13.95, 9.95, 12.95];
+
+const foodDesc = [
+  'Flatbread topped with fresh vegetables, herbs, and a light sauce, featuring ingredients like tomatoes, bell peppers, zucchini, spinach, onions, and basil on a thin, crispy crust.',
+  'Creamy Arborio rice infused with garlic, fresh thyme, and white wine, topped with sautéed wild mushrooms and crispy shallots.',
+  'Baby kale, arugula, heirloom carrots, watermelon radish, toasted walnuts, and orange segments tossed with a maple-mustard vinaigrette.',
+  'Winter: Roasted Butternut Squash Soup with sage oil and toasted pumpkin seeds. Spring: Asparagus and Green Pea Soup garnished with microgreens and cashew cream.',
+  'A medley of farm-fresh veggies (zucchini, bell peppers, snap peas, carrots) stir-fried in a tangy ginger-soy glaze, served over organic brown rice or quinoa.',
+  'Rich and creamy chocolate mousse made with ripe avocados and sweetened with maple syrup, served with coconut whipped cream.',
+  'Charred zucchini, roasted bell peppers, caramelized onions, and hummus on a toasted whole-grain baguette, served with a side of fresh greens.'
+];
+
+const foodImg = [
+  '../resources/menu_items/garden_flatbread.jpg',
+  '../resources/menu_items/risotto.jpg',
+  '../resources/menu_items/evergreen-bowl.jpg',
+  '../resources/menu_items/seasonal_soup.jpg',
+  '../resources/menu_items/rainbow_stir-fry.jpg',
+  '../resources/menu_items/avocado_mousse.jpg',
+  '../resources/menu_items/grilled_sandwich.jpg'
+];
 
 window.addEventListener('load', () => {
   const menuTable = document.getElementById('menuTable');
 
-  for (var i = 0; i < foodItem.length; i++) {
+  for (let i = 0; i < foodItem.length; i++) {
     let row = document.createElement('tr');
 
     let imageCell = document.createElement('td');
-    let image = new Image;
+    let image = new Image();
     image.src = '../resources/' + foodImg[i];
+    image.alt = foodItem[i];
+    image.width = 150;
+    image.height = 110;
     imageCell.appendChild(image);
     row.appendChild(imageCell);
 
@@ -40,7 +61,7 @@ window.addEventListener('load', () => {
     row.appendChild(itemName);
     
     let price = document.createElement('td');
-    price.textContent = '$' + foodPrice[i].toLocaleString();
+    price.textContent = '$' + foodPrice[i].toFixed(2);
     price.classList.add('price');
     row.appendChild(price);
 

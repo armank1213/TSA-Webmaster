@@ -1,18 +1,12 @@
-@charset "utf8";
+@charset "utf8"; 
 
-/* 
-Reset, variables, and reusable styles  
-*/
 
-@font-face {
-  font-family: RobotoBold;
-  src: url('resources/RobotoSlab-Bold.woff');
-}
+/* GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&family=Montserrat:wght@100..900&display=swap');
 
-@font-face {
-  font-family: Roboto;
-  src: url('resources/Roboto-Regular.woff');
-}
+
+
+
 
 /* RESET */
 

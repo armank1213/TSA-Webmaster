@@ -11,8 +11,8 @@ body {
 /* TITLE SECTION */
 #banner {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url('../resources/farm-to-table_restaurants__5184x2103____v1222x580__.jpg') center center / cover no-repeat;
-  height: 20rem;
+    url('../resources/background-3.jpg') center center / cover no-repeat;
+  height: 30rem;
   position: relative;
   display: flex;
   flex-direction: column;
