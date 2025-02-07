@@ -1,6 +1,7 @@
 'use strict';
 
 // make nav smaller when scrolling down
+// Test change
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => {
   if (window.scrollY > 100 && window.screen.width > 600) {
