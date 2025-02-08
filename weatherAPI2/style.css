@@ -1,53 +1,78 @@
 @charset "utf8"; 
 
-@import url(../base.css);  
+@import url(../base.css); 
 
 body {
-    background-image: url('../resources/background.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     min-height: 100vh;
-    padding-top: 60px; /* Add padding to account for the fixed navbar */
-}
-
-/* Add styles for the main content container */
-.content-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: calc(100vh - 60px); /* Subtract navbar height */
-    width: 100%;
-    padding: 20px;
-    box-sizing: border-box;
+    flex-direction: column;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Update navbar styles to match other pages */
-nav {
-    background-color: rgba(128, 128, 128, 0.5);
-    position: fixed;
+/* Banner styles */
+.banner {
+    height: 400px;
+    position: relative;
+    background-image: url('../resources/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.banner::before {
+    content: '';
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1000;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+}
+
+.banner-text {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.title {
+    color: var(--creamy-white);
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 20px var(--black);
+}
+
+.subtitle {
+    color: var(--creamy-white);
+    font-size: 1.25rem;
+    text-shadow: 0 0 20px var(--black);
+}
+
+/* Main content styles */
+.main-content {
+    background-color: white;
+    flex: 1;
+    padding: 40px 20px;
+    margin-top: -50px;
+    position: relative;
+    z-index: 1;
+    border-radius: 50px 50px 0 0;
 }
 
 #weather-container {
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(0, 0, 0, 0.05);
     max-width: 400px;
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
     text-align: center;
-    margin: 0 auto;
+    margin: 0 auto 60px;
 }
 
-h2, label, p {
-    color: #fff;
+h2 {
+    color: #333;
     margin: 8px 0;
 }
 
@@ -56,7 +81,7 @@ input {
     padding: 8px;
     box-sizing: border-box;
     border-radius: 10px;
-    border: 1px solid white;
+    border: 1px solid #ddd;
     margin-top: 20px;
 }
 
@@ -79,10 +104,12 @@ button:hover {
 #temp-div p {
     font-size: 60px;
     margin-top: -30px;
+    color: #333;
 }
 
 #weather-info {
     font-size: 20px;
+    color: #333;
 }
 
 #weather-icon {
@@ -108,7 +135,7 @@ button:hover {
     flex-direction: column;
     align-items: center;
     margin-right: 10px;
-    color: white;
+    color: #333;
 }
 
 .hourly-item img {
@@ -118,6 +145,66 @@ button:hover {
 }
 
 #hourly-heading {
-    color: #fff;
+    color: #333;
     margin-top: 10px;
+}
+
+/* Footer styles */
+footer {
+    margin-top: auto;  /* Keep this to push footer to bottom */
+}
+
+/* Burger menu styles */
+#burger-wrapper {
+    display: none;
+}
+
+/* Location Cards Styles */
+.locations-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto 40px;
+}
+
+.location-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.location-card:hover {
+    transform: translateY(-5px);
+}
+
+.location-number {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    background: var(--earthy-green);
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.location-card h3 {
+    color: var(--earthy-green);
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.location-card p {
+    color: #666;
+    margin: 5px 0;
+    font-size: 1rem;
 }

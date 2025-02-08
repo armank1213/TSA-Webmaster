@@ -18,13 +18,13 @@ const foodItem = [
 const foodPrice = [15.95, 12.95, 10.95, 9.95, 13.95, 9.95, 12.95];
 
 const foodDesc = [
-  'Flatbread topped with fresh vegetables, herbs, and a light sauce, featuring ingredients like tomatoes, bell peppers, zucchini, spinach, onions, and basil on a thin, crispy crust.',
-  'Creamy Arborio rice infused with garlic, fresh thyme, and white wine, topped with sautéed wild mushrooms and crispy shallots.',
-  'Baby kale, arugula, heirloom carrots, watermelon radish, toasted walnuts, and orange segments tossed with a maple-mustard vinaigrette.',
-  'Winter: Roasted Butternut Squash Soup with sage oil and toasted pumpkin seeds. Spring: Asparagus and Green Pea Soup garnished with microgreens and cashew cream.',
-  'A medley of farm-fresh veggies (zucchini, bell peppers, snap peas, carrots) stir-fried in a tangy ginger-soy glaze, served over organic brown rice or quinoa.',
-  'Rich and creamy chocolate mousse made with ripe avocados and sweetened with maple syrup, served with coconut whipped cream.',
-  'Charred zucchini, roasted bell peppers, caramelized onions, and hummus on a toasted whole-grain baguette, served with a side of fresh greens.'
+  'Flatbread topped with fresh vegetables, herbs, and a light sauce, featuring ingredients like tomatoes, bell peppers, zucchini, spinach, onions, and basil on a thin, crispy crust. Calories: 1000 Per Flatbread.',
+  'Creamy Arborio rice infused with garlic, fresh thyme, and white wine, topped with sautéed wild mushrooms and crispy shallots. Calories: 400 Per Serving.',
+  'Baby kale, arugula, heirloom carrots, watermelon radish, toasted walnuts, and orange segments tossed with a maple-mustard vinaigrette. Calories: 450 Per Bowl.',
+  'Winter: Roasted Butternut Squash Soup with sage oil and toasted pumpkin seeds. Spring: Asparagus and Green Pea Soup garnished with microgreens and cashew cream. Calories: 200 Per Bowl.',
+  'A medley of farm-fresh veggies (zucchini, bell peppers, snap peas, carrots) stir-fried in a tangy ginger-soy glaze, served over organic brown rice or quinoa. Calories: 500 With Rice.',
+  'Rich and creamy chocolate mousse made with ripe avocados and sweetened with maple syrup, served with coconut whipped cream. Calories: 300 Per Serving.',
+  'Charred zucchini, roasted bell peppers, caramelized onions, and hummus on a toasted whole-grain baguette, served with a side of fresh greens. Calories: 450 Per Sandwich.'
 ];
 
 const foodImg = [
