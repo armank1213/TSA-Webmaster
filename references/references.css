@@ -1,0 +1,91 @@
+@charset "utf8";
+
+@import url(../base.css);
+
+#banner {
+  background: -o-linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url('../resources/references-background.jpg') center center / cover no-repeat;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))),
+    url('../resources/references-background.jpg') center center / cover no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url('../resources/references-background.jpg') center center / cover no-repeat;
+  height: 30rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* title wont center to the background */
+.title {
+  font-size: 3rem;
+  color: white;
+  margin: 0;
+  margin-top: -200px;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  color: white;
+  margin: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+}
+
+main {
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.references-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.references-list li {
+  background: #fff;
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+}
+
+#references {
+  padding: 50px 0;
+  margin-top: -30px; /* Adjust the value as needed */
+}
+
+#references main ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#references main ul li {
+  margin: 10px 0;
+}
+
+#references main ul li a {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+#references main ul li a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  margin-bottom: 40px;
+}
+
+#forms, #hs-form {
+  margin-top: 40px;
+}
