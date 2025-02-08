@@ -5,11 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
     <link rel="stylesheet" href="./style.css">
+    <script src="./script.js"></script> 
+    <script src="../common.js" type="module" async></script>
 </head>
 <body>
+    <nav id="nav" class="navbar">
+        <div id="burger-wrapper">
+          <div class="burger-btn"></div>
+        </div>
+        <ul class="container top-nav">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../order/index.html">Order</a></li>
+          <li><a href="../menu/index.html">Menu</a></li>
+          <li><a href="../journey-page/journey.html">Journey</a></li>
+          <li><a href="../references/references.html">References</a></li>
+          <li><a href="../weatherAPI2/index.html">API</a></li>
+        </ul>
+      </nav>
     <div id="weather-container">
         <h2>Weather App</h2>
-        <input type="text" id="city" placeholder="Enter city">
+        <input type="text" id="city" placeholder="Enter city"> 
         <button onclick="getWeather()">Search</button>
 
         <img id="weather-icon" alt="Weather Icon">
@@ -19,7 +34,6 @@
         <div id="weather-info"></div>
 
         <div id="hourly-forecast"></div>
-    </div>
-    <!-- <script src="./script.js"></script> -->
+    </div> 
 </body>
 </html>

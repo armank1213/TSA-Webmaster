@@ -1,3 +1,8 @@
+@charset "utf8";
+
+@import url(../base.css);
+
+
 body {
     background-image: url("../resources/background.jpg");
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
