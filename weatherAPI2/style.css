@@ -1,7 +1,6 @@
-@charset "utf8";
+@charset "utf8"; 
 
 @import url(../base.css);  
-
 
 body {
     background-image: url('../resources/background.jpg');
@@ -9,11 +8,32 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
     margin: 0;
+    min-height: 100vh;
+    padding-top: 60px; /* Add padding to account for the fixed navbar */
+}
+
+/* Add styles for the main content container */
+.content-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 60px); /* Subtract navbar height */
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Update navbar styles to match other pages */
+nav {
+    background-color: rgba(128, 128, 128, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 #weather-container {
@@ -25,6 +45,7 @@ body {
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     text-align: center;
+    margin: 0 auto;
 }
 
 h2, label, p {
