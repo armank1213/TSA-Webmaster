@@ -291,23 +291,6 @@ article {
   transform: translateY(0);
 }
 
-/* Explicitly define fade-in initial state */
-.fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
-/* For loaded images */
-img[loading="lazy"] {
-  transition: opacity 0.3s ease;
-  opacity: 0;
-}
-
-img[loading="lazy"].loaded {
-  opacity: 1;
-}
-
 /* Additional Styles */
 .farm-to-table-intro {
   max-width: 800px;
