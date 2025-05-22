@@ -10,7 +10,7 @@ export const foodItems = [
   {
     name: 'Wild Mushroom Risotto',
     price: 12.95,
-    desc: 'Creamy Arborio rice with a medley of wild mushrooms, finished with truffle oil and Parmesan.',
+    desc: 'Creamy arborio rice with a medley of wild mushrooms, finished with truffle oil and parmesan.',
     img: './menu_items/risotto.jpg',
   },
   {
@@ -23,7 +23,7 @@ export const foodItems = [
   {
     name: 'Seasonal Harvest Soup',
     price: 9.95,
-    desc: 'Winter: Roasted Butternut Squash Soup with sage oil and toasted pumpkin seeds. Spring: Asparagus and Green Pea Soup garnished with microgreens and cashew cream.',
+    desc: 'Winter: Roasted butternut squash Soup with sage oil and toasted pumpkin seeds. Spring: Asparagus and green pea soup garnished with microgreens and cashew cream.',
     img: './menu_items/seasonal_soup.jpg',
   },
 
