@@ -75,7 +75,7 @@
   position: static;
   flex: 0 0 auto; /* Prevent it from growing/shrinking */
   height: fit-content; /* Only take the height it needs */
-  width: 350px; /* Fixed width */
+  width: 380px; /* Slightly wider to accommodate text */
   background-color: var(--background-light);
   border-radius: var(--border-radius);
   padding: 25px;
@@ -159,6 +159,31 @@ button:hover {
   display: flex;
   gap: 15px;
   padding: 10px 0;
+}
+
+/* Weather description styling */
+.weather-description {
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.weather-description h4 {
+  color: var(--primary-dark);
+  font-size: 1.1rem;
+  margin: 0 0 12px 0;
+  font-weight: 600;
+}
+
+.weather-description p {
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+.weather-description p:last-child {
+  margin-bottom: 0;
 }
 
 /* Footer styles */
